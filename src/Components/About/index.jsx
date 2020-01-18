@@ -2,57 +2,62 @@ import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { connect } from 'redhooks'
-import screenSize from 'Helper'
+import Rose from 'Assets/Svg/Rose.svg'
+
+const Logo = () => {
+  return <Rose />
+}
 
 const Header = props => {
-  const { profileReducer } = props
-
-  console.log({ screenSize })
-
-  // const [state, setState] = useState('')
-  // console.log(profile, profileReducer)
-
-  // useEffect(() => {
-  //   effect()
-  //   return () => {
-  //     cleanup()
-  //   }
-  // }, [state])
-
+  const { profile, profileReducer } = props
+  console.log({ profile })
   return (
     <Container>
-      <div>
-        <button
-          type='button'
-          onClick={() => {
-            profileReducer({ action: 'ADD', payload: 'State' })
-          }}
-        >
-          Button
-        </button>
-      </div>
+      <WrapperUI>
+        <Logo />
+        <div>
+          <ButtonUI
+            type='button'
+            onClick={() => {
+              profileReducer({ action: 'ADD', payload: 'State' })
+            }}
+          >
+            Button
+          </ButtonUI>
+        </div>
+      </WrapperUI>
     </Container>
   )
 }
 
-// const mapStateToProps = state => ({
-//   profile: state.counter,
-// })
+const mapStateToProps = state => ({
+  profile: state.counter,
+})
 const mapDispatchToProps = dispatch => ({
   profileReducer: ({ action, payload }) =>
     dispatch({ type: action, payload }),
 })
 
-const { width, height } = screenSize
+const WrapperUI = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 50px 250px 150px;
+  grid-auto-rows: minmax(55px, auto);
+  grid-column-gap: 10px;
+`
 
 const Container = styled.div`
-  /* width: width;
-  height: height; */
+  width: 100%;
+  height: 55px;
   background: red;
 `
 
+const ButtonUI = styled.button``
+
 Header.propTypes = {
-  // profile: PropTypes.object,
+  profile: PropTypes.number,
   profileReducer: PropTypes.func,
 }
-export default connect(null, mapDispatchToProps)(Header)
+export default connect(mapStateToProps, mapDispatchToProps)(Header)

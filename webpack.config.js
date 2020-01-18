@@ -15,6 +15,7 @@ const resolver = {
   Utils: path.resolve(__dirname, 'src/Utils'),
   Helper: path.resolve(__dirname, 'src/Utils/Helper'),
   CustomHooks: path.resolve(__dirname, 'src/CustomHooks'),
+  Assets: path.resolve(__dirname, 'src/Assets'),
 }
 
 module.exports = {
