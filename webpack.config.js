@@ -12,6 +12,8 @@ const resolver = {
   Screens: path.resolve(__dirname, 'src/Screens'),
   Styles: path.resolve(__dirname, 'src/Styles'),
   Ui: path.resolve(__dirname, 'src/Ui'),
+  Utils: path.resolve(__dirname, 'src/Utils'),
+  Helper: path.resolve(__dirname, 'src/Utils/Helper'),
 }
 
 module.exports = {
@@ -35,6 +37,7 @@ module.exports = {
       {
         test: /\.svg$/,
         use: ['@svgr/webpack'],
+        options: { configFile: path.resolve(__dirname, '.svgrrc') },
       },
       {
         test: /\.(png|jpg|gif)$/i,

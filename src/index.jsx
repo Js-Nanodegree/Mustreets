@@ -9,6 +9,8 @@ import catalogRu from 'Locales/ru/messages.json'
 import catalogFr from 'Locales/fr/messages.json'
 import catalogEs from 'Locales/es/messages.json'
 import WrapperRouter from 'Router'
+import Provider from 'redhooks'
+import store from './Redux/reducers'
 
 const catalogs = {
   en: catalogEn,
@@ -19,10 +21,11 @@ const catalogs = {
 
 const Index = () => {
   return (
-    <I18nProvider language='en' catalogs={catalogs}>
-      <App />
-      <WrapperRouter />
-    </I18nProvider>
+    <Provider store={store}>
+      <I18nProvider language='en' catalogs={catalogs}>
+        <WrapperRouter />
+      </I18nProvider>
+    </Provider>
   )
 }
 
