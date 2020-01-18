@@ -6,7 +6,6 @@
   ],
   "plugins": [
     [
-      "macros",
       "module-resolver",
       {
         "root": ["./src"],
