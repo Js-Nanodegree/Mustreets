@@ -2,10 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { connect } from 'redhooks'
-// import Rose from 'Assets/Svg/Rose.svg'
+import Rose from 'Assets/Svg/Rose.svg'
 import SVG from 'react-inlinesvg'
 
 const Logo = () => {
+  console.log(Rose)
   return <SVG src='Assets/Svg/Rose.svg' />
 }
 

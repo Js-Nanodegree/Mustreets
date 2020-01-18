@@ -50,14 +50,14 @@ module.exports = {
         loader: '@svgr/webpack',
         options: { configFile: path.resolve(__dirname, '.svgrrc') },
       },
-      {
-        test: /url\.svg$/,
-        use: ['@svgr/webpack', 'url-loader'],
-      },
-      {
-        test: /url\.svg$/,
-        use: ['@svgr/webpack', 'file-loader'],
-      },
+      // {
+      //   test: /url\.svg$/,
+      //   use: ['@svgr/webpack', 'url-loader'],
+      // },
+      // {
+      //   test: /url\.svg$/,
+      //   use: ['@svgr/webpack', 'file-loader'],
+      // },
       {
         test: /\.(png|jpg|gif)$/i,
         use: ['url-loader', 'file-loader'],
