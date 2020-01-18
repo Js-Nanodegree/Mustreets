@@ -2,13 +2,15 @@ import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { connect } from 'redhooks'
-import Rose from 'Assets/Svg/Rose.svg'
+// import Rose from 'Assets/Svg/Rose.svg'
 import SVG from 'react-inlinesvg'
+import { ReactSVG } from 'react-svg'
 
-const Logo = () => {
-  console.log(Rose)
-  return <SVG src='Assets/Svg/Rose.svg' />
-}
+const Icon = () => <ReactSVG src='Assets/Svg/Rose.svg' />
+
+// const Logo = () => {
+//   return <Icon />
+// }
 
 const Header = props => {
   const { profile, profileReducer } = props
@@ -16,7 +18,7 @@ const Header = props => {
   return (
     <Container>
       <WrapperUI>
-        <Logo />
+        <Icon />
         <div>
           <ButtonUI
             type='button'

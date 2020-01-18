@@ -45,11 +45,11 @@ module.exports = {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
       },
-      {
-        test: /\.svg$/,
-        loader: '@svgr/webpack',
-        // options: { configFile: path.resolve(__dirname, '.svgrrc') },
-      },
+      // {
+      //   test: /\.svg$/,
+      //   loader: '@svgr/webpack',
+      //   // options: { configFile: path.resolve(__dirname, '.svgrrc') },
+      // },
       // {
       //   test: /url\.svg$/,
       //   use: ['@svgr/webpack', 'url-loader'],
