@@ -5,6 +5,15 @@ const { DefinePlugin } = require('webpack')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const Dotenv = require('dotenv-webpack')
 
+const resolver = {
+  Components: path.resolve(__dirname, 'src/Components'),
+  Locales: path.resolve(__dirname, 'src/locales'),
+  Router: path.resolve(__dirname, 'src/Router'),
+  Screens: path.resolve(__dirname, 'src/Screens'),
+  Styles: path.resolve(__dirname, 'src/Styles'),
+  Ui: path.resolve(__dirname, 'src/Ui'),
+}
+
 module.exports = {
   devtool: 'source-map',
   entry: './src/index.jsx',
@@ -35,7 +44,7 @@ module.exports = {
   },
   resolve: {
     extensions: ['*', '.js', '.jsx'],
-    alias: { Components: path.resolve(__dirname, 'src/Components') },
+    alias: resolver,
   },
   devServer: {
     contentBase: './dist',
