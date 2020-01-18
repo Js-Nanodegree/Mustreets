@@ -2,11 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { connect } from 'redhooks'
+import screenSize from 'Helper'
 
 const Header = props => {
   const { profileReducer } = props
 
-  console.log({ profileReducer })
+  console.log({ screenSize })
 
   // const [state, setState] = useState('')
   // console.log(profile, profileReducer)
@@ -42,13 +43,16 @@ const mapDispatchToProps = dispatch => ({
     dispatch({ type: action, payload }),
 })
 
+const { width, height } = screenSize
+
+const Container = styled.div`
+  /* width: width;
+  height: height; */
+  background: red;
+`
+
 Header.propTypes = {
   // profile: PropTypes.object,
   profileReducer: PropTypes.func,
 }
 export default connect(null, mapDispatchToProps)(Header)
-
-const Container = styled.div`
-  /* width: screenSize.width; */
-  /* height */
-`
