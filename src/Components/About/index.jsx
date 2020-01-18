@@ -3,10 +3,10 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { connect } from 'redhooks'
 // import Rose from 'Assets/Svg/Rose.svg'
-import SVG from 'react-inlinesvg'
+// import SVG from 'react-inlinesvg'
 import { ReactSVG } from 'react-svg'
 
-const Icon = () => <ReactSVG src='Assets/Svg/Rose.svg' />
+// const Icon = () =>
 
 // const Logo = () => {
 //   return <Icon />
@@ -18,7 +18,10 @@ const Header = props => {
   return (
     <Container>
       <WrapperUI>
-        <Icon />
+        <ReactSVG
+          src='../../Assets/Svg/Rose.svg'
+          style={{ width: '200px', height: '200px' }}
+        />
         <div>
           <ButtonUI
             type='button'
@@ -43,13 +46,13 @@ const mapDispatchToProps = dispatch => ({
 })
 
 const WrapperUI = styled.div`
-  display: flex;
-  justify-content: center;
+  /* display: flex; */
+  /* justify-content: center;
   align-items: center;
   display: grid;
   grid-template-columns: 50px 250px 150px;
   grid-auto-rows: minmax(55px, auto);
-  grid-column-gap: 10px;
+  grid-column-gap: 10px; */
 `
 
 const Container = styled.div`
