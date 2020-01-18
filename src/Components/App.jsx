@@ -12,8 +12,6 @@ const App = () => {
   )
 }
 
-const Button = styled.div`
-  background
-`
+const Button = styled.div``
 
 export default App
