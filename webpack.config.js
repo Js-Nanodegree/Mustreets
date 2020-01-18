@@ -34,11 +34,11 @@ module.exports = {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
       },
-      // {
-      //   test: /\.svg$/,
-      //   loader: '@svgr/webpack',
-      //   options: { configFile: path.resolve(__dirname, '.svgrrc') },
-      // },
+      {
+        test: /\.svg$/,
+        loader: '@svgr/webpack',
+        options: { configFile: path.resolve(__dirname, '.svgrrc') },
+      },
       {
         test: /\.(png|jpg|gif)$/i,
         use: ['url-loader', 'file-loader'],
