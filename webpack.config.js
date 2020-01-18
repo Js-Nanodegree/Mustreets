@@ -48,7 +48,7 @@ module.exports = {
       {
         test: /\.svg$/,
         loader: '@svgr/webpack',
-        options: { configFile: path.resolve(__dirname, '.svgrrc') },
+        // options: { configFile: path.resolve(__dirname, '.svgrrc') },
       },
       // {
       //   test: /url\.svg$/,
