@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 // eslint-disable-next-line import/no-unresolved
-import App from 'Components/App'
+// import App from 'Components/App'
 import { I18nProvider } from '@lingui/react'
 
 import catalogEn from 'Locales/en/messages.json'

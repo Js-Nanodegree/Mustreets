@@ -8,6 +8,7 @@ import Headers from 'Components/Header'
 import About from 'Components/About'
 
 const WrapperRouter = () => {
+  console.log(123)
   return (
     <Router>
       <Headers />
