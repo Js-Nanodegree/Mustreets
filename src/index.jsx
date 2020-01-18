@@ -27,8 +27,8 @@ const RouterPage = () => {
   return (
     <Router>
       <Link to='/'>Home</Link>
-      <Link to='/'>Home</Link>
-      <Link to='/'>Home</Link>
+      <Link to='/about'>About</Link>
+      <Link to='/topics'>topics</Link>
     </Router>
   )
 }
@@ -36,6 +36,7 @@ const RouterPage = () => {
 const WrapperRouter = () => {
   return (
     <Router>
+      <RouterPage />
       <Switch>
         <Route path='/'>
           <About />
@@ -43,7 +44,7 @@ const WrapperRouter = () => {
         <Route path='/about'>
           <About />
         </Route>
-        <Route path='/Topics'>
+        <Route path='/topics'>
           <About />
         </Route>
         <Route>
