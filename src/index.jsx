@@ -17,7 +17,7 @@ const catalogs = {
 
 const Index = () => {
   return (
-    <I18nProvider language="en" catalogs={catalogs}>
+    <I18nProvider language='en' catalogs={catalogs}>
       <App />
     </I18nProvider>
   )
