@@ -1,6 +1,8 @@
-import { combineReducers } from 'redhooks'
+import { combineReducers, createStore } from 'redhooks'
 
-const greeting = (state = 'good morning', { type, payload }) => {
+const InitialState = { state: 'SetState' }
+
+const greeting = (state = InitialState, { type, payload }) => {
   switch (type) {
     case 'GREET':
       return payload
@@ -20,6 +22,7 @@ const counter = (state = 0, { type }) => {
   }
 }
 
-const rootReducer = combineReducers({ greeting, counter })
+// const rootReducer =
+const store = createStore(combineReducers({ greeting, counter }))
 
-export default rootReducer
+export { store }

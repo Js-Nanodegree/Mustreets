@@ -26,6 +26,7 @@
     "@lingui/react": "^2.9.0",
     "@svgr/core": "^5.0.1",
     "@svgr/parcel-plugin-svgr": "^5.0.1",
+    "axios": "^0.19.1",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.4.2",
     "eslint-import-resolver-webpack": "^0.12.1",

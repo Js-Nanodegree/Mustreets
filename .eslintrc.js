@@ -38,6 +38,6 @@ module.exports = {
     "react/jsx-props-no-spreading": "off",
     "import/extensions":"off",
     "import/no-unresolved": "off",
-    "import/resolver": "off"
+    "import/resolver": "off",
   },
 };

@@ -10,7 +10,7 @@ import catalogFr from 'Locales/fr/messages.json'
 import catalogEs from 'Locales/es/messages.json'
 import WrapperRouter from 'Router'
 import Provider from 'redhooks'
-import store from './Redux/reducers'
+import { store } from './Redux'
 
 const catalogs = {
   en: catalogEn,
