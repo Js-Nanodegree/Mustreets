@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom'
 // eslint-disable-next-line import/no-unresolved
 import App from 'Components/App'
 import { I18nProvider } from '@lingui/react'
-import catalogCs from './locales/ru/messages.js'
+import catalogEn from 'locales/en/messages.json'
 
-const catalogs = { cs: catalogCs }
+const catalogs = { en: catalogEn }
 
 const Index = () => {
   return (
-    <I18nProvider catalogs={catalogs} language="ru">
+    <I18nProvider language="en" catalogs={catalogs}>
       <App />
     </I18nProvider>
   )
