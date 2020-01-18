@@ -36,6 +36,10 @@ module.exports = {
     "react/require-default-props": "off",
     "react/forbid-prop-types": "off",
     "react/jsx-props-no-spreading": "off",
-    "import/extensions":"off"
+    "import/extensions":"off",
+    "import/no-unresolved": [
+      2, 
+      { "caseSensitive": false }
+   ] 
   },
 };
