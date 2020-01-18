@@ -37,9 +37,7 @@ module.exports = {
     "react/forbid-prop-types": "off",
     "react/jsx-props-no-spreading": "off",
     "import/extensions":"off",
-    "import/no-unresolved": [
-      2, 
-      { "caseSensitive": false }
-   ] 
+    "import/no-unresolved": "off",
+    "import/resolver": "off"
   },
 };
