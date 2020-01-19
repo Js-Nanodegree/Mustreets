@@ -8,7 +8,7 @@ const Dotenv = require('dotenv-webpack')
 const resolver = {
   Components: path.resolve(__dirname, 'src/Components'),
   Locales: path.resolve(__dirname, 'src/locales'),
-  Router: path.resolve(__dirname, 'src/Router'),
+  Router: path.resolve(__dirname, 'src/Router/index.jsx'),
   Screens: path.resolve(__dirname, 'src/Screens'),
   Styles: path.resolve(__dirname, 'src/Styles'),
   Ui: path.resolve(__dirname, 'src/Ui'),
