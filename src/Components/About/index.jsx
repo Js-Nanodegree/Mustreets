@@ -2,9 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { connect } from 'redhooks'
-// import Rose from 'Assets/Svg/Rose.svg'
+import KeyImage from 'Assets/Svg/Rose.svg'
 // import SVG from 'react-inlinesvg'
-
+import SVG from 'react-inlinesvg'
 // const Icon = () =>
 
 // const Logo = () => {
@@ -18,6 +18,7 @@ const Header = props => {
     <Container>
       <WrapperUI>
         <div>
+          <SVG src={KeyImage} />
           <ButtonUI
             type='button'
             onClick={() => {
