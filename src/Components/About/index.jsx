@@ -17,21 +17,24 @@ const Header = props => {
   return (
     <Container>
       <WrapperUI>
-        <div>
-          <SVG src={KeyImage} />
-          <ButtonUI
-            type='button'
-            onClick={() => {
-              profileReducer({ action: 'ADD', payload: 'State' })
-            }}
-          >
-            Button
-          </ButtonUI>
-        </div>
+        <Logo src={KeyImage} classNames='b-apikey' />
+        <ButtonUI
+          type='button'
+          onClick={() => {
+            profileReducer({ action: 'ADD', payload: 'State' })
+          }}
+        >
+          Button
+        </ButtonUI>
       </WrapperUI>
     </Container>
   )
 }
+
+const Logo = styled(SVG)`
+  width: 60px;
+  height: 60px;
+`
 
 const mapStateToProps = state => ({
   profile: state.counter,
@@ -42,13 +45,22 @@ const mapDispatchToProps = dispatch => ({
 })
 
 const WrapperUI = styled.div`
-  /* display: flex; */
-  /* justify-content: center;
+  display: flex;
+  justify-content: center;
   align-items: center;
   display: grid;
   grid-template-columns: 50px 250px 150px;
   grid-auto-rows: minmax(55px, auto);
-  grid-column-gap: 10px; */
+  grid-column-gap: 10px;
+
+  &:hover {
+    background-color: bisque;
+  }
+
+  .b-apikey {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
 `
 
 const Container = styled.div`
