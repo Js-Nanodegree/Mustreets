@@ -45,19 +45,19 @@ module.exports = {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
       },
-      // {
-      //   test: /\.svg$/,
-      //   loader: '@svgr/webpack',
-      //   // options: { configFile: path.resolve(__dirname, '.svgrrc') },
-      // },
-      // {
-      //   test: /url\.svg$/,
-      //   use: ['@svgr/webpack', 'url-loader'],
-      // },
-      // {
-      //   test: /url\.svg$/,
-      //   use: ['@svgr/webpack', 'file-loader'],
-      // },
+      {
+        test: /\.svg$/,
+        loader: '@svgr/webpack',
+        // options: { configFile: path.resolve(__dirname, '.svgrrc') },
+      },
+      {
+        test: /url\.svg$/,
+        use: ['@svgr/webpack', 'url-loader'],
+      },
+      {
+        test: /url\.svg$/,
+        use: ['@svgr/webpack', 'file-loader'],
+      },
       {
         test: /\.(png|jpg|gif)$/i,
         use: ['url-loader', 'file-loader'],
