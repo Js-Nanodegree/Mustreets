@@ -20,6 +20,7 @@ const Header = props => {
         <Logo src={KeyImage} classNames='b-apikey' />
         <ButtonUI
           type='button'
+          classNames='b-threed'
           onClick={() => {
             profileReducer({ action: 'ADD', payload: 'State' })
           }}
@@ -50,7 +51,7 @@ const WrapperUI = styled.div`
   align-items: center;
   display: grid;
   grid-template-columns: 50px 250px 150px;
-  grid-auto-rows: minmax(55px, auto);
+  grid-auto-rows: 55px 55px 55px;
   grid-column-gap: 10px;
 
   &:hover {
@@ -59,7 +60,15 @@ const WrapperUI = styled.div`
 
   .b-apikey {
     grid-column-start: 1;
-    grid-column-end: 2;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-start: 1;
+  }
+  .b-threed {
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-start: 3;
   }
 `
 
