@@ -39,7 +39,6 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-hot-loader": "^4.12.18",
-    "react-inlinesvg": "^1.2.0",
     "react-router-dom": "^5.1.2",
     "react-svg": "^11.0.7",
     "redhooks": "^1.1.0",
@@ -73,6 +72,8 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.18.0",
-    "eslint-plugin-react-hooks": "^1.7.0"
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "react-inlinesvg": "^1.2.0",
+    "svg-inline-loader": "^0.8.0"
   }
 }

@@ -3,6 +3,10 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { connect } from 'redhooks'
 import Rose from 'Assets/Svg/Rose.svg'
+// import SVG from 'react-inlinesvg'
+// import { ReactSVG } from 'react-svg'
+import SVG from 'react-inlinesvg';
+
 
 // const Icon = () =>
 
@@ -16,7 +20,10 @@ const Header = props => {
   return (
     <Container>
       <WrapperUI>
-        {/* <img src={Rose} /> */}
+        <SVG
+          src='../../Assets/Svg/Rose.svg'
+          style={{ width: '200px', height: '200px' }}
+        />
         <div>
           <ButtonUI
             type='button'
