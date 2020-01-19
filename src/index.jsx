@@ -8,8 +8,8 @@ import catalogEn from 'Locales/en/messages.json'
 import catalogRu from 'Locales/ru/messages.json'
 import catalogFr from 'Locales/fr/messages.json'
 import catalogEs from 'Locales/es/messages.json'
-import WrapperRouter from 'Router'
 import Provider from 'redhooks'
+import WrapperRouter from './Router'
 import { store } from './Redux'
 
 const catalogs = {
