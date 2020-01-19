@@ -17,24 +17,56 @@ const Header = props => {
   return (
     <Container>
       <WrapperUI>
-        <Logo src={KeyImage} classNames='b-apikey' />
-        <ButtonUI
-          type='button'
-          classNames='b-threed'
-          onClick={() => {
-            profileReducer({ action: 'ADD', payload: 'State' })
-          }}
-        >
-          Button
-        </ButtonUI>
+        <div className='b-apikey'>
+          <Logo src={KeyImage} />
+        </div>
+        <div>
+          <Title>Title</Title>
+        </div>
+        <div className='b-threed'>
+          <ButtonUI
+            type='button'
+            onClick={() => {
+              profileReducer({ action: 'ADD', payload: 'State' })
+            }}
+          >
+            Button
+          </ButtonUI>
+          <ButtonUI
+            type='button'
+            onClick={() => {
+              profileReducer({ action: 'ADD', payload: 'State' })
+            }}
+          >
+            Button
+          </ButtonUI>
+        </div>
       </WrapperUI>
+      <MenuWrapper>
+        <div>
+          <MenuCard>What is Cosmos ?</MenuCard>
+        </div>
+      </MenuWrapper>
     </Container>
   )
 }
 
-const Logo = styled(SVG)`
-  width: 60px;
-  height: 60px;
+const Title = styled.h1`
+  text-align: center;
+  justify-content: space-around;
+  font-size: 32px;
+`
+
+const MenuWrapper = styled.div`
+  width: 450px;
+  background: red;
+  height: 450px;
+  display: flex;
+`
+
+const MenuCard = styled.div`
+  text-align: center;
+  padding: 15px;
 `
 
 const mapStateToProps = state => ({
@@ -46,39 +78,55 @@ const mapDispatchToProps = dispatch => ({
 })
 
 const WrapperUI = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
   display: grid;
-  grid-template-columns: 50px 250px 150px;
-  grid-auto-rows: 55px 55px 55px;
+  align-items: center;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 10px;
 
   &:hover {
     background-color: bisque;
   }
-
   .b-apikey {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
     grid-column-start: 1;
     grid-column-end: 1;
     grid-row-start: 1;
     grid-row-start: 1;
   }
   .b-threed {
+    display: flex;
+    justify-content: space-around;
     grid-column-start: 3;
     grid-column-end: 3;
-    grid-row-start: 3;
-    grid-row-start: 3;
+    grid-row-start: 1;
+    grid-row-start: 1;
   }
+`
+const Logo = styled(SVG)`
+  width: 60px;
+  height: 60px;
 `
 
 const Container = styled.div`
   width: 100%;
-  height: 55px;
-  background: red;
 `
 
-const ButtonUI = styled.button``
+const ButtonUI = styled.button`
+  height: 3rem;
+  width: 10rem;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffff;
+  border-color: #99f;
+  border-width: 2px;
+  background: #99f;
+  border-radius: 10px;
+`
 
 Header.propTypes = {
   profile: PropTypes.number,
