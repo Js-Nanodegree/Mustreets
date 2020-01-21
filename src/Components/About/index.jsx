@@ -21,7 +21,7 @@ const Header = props => {
           <Logo src={KeyImage} />
         </div>
         <div>
-          <Title>Title</Title>
+          <Title>ROSE COIN</Title>
         </div>
         <div className='b-threed'>
           <ButtonUI
@@ -30,7 +30,7 @@ const Header = props => {
               profileReducer({ action: 'ADD', payload: 'State' })
             }}
           >
-            Button
+            WATCH VIDEO
           </ButtonUI>
           <ButtonUI
             type='button'
@@ -38,7 +38,7 @@ const Header = props => {
               profileReducer({ action: 'ADD', payload: 'State' })
             }}
           >
-            Button
+            LEARN MORE
           </ButtonUI>
         </div>
       </WrapperUI>
@@ -53,8 +53,13 @@ const Header = props => {
 
 const Title = styled.h1`
   text-align: center;
+  text-transform: uppercase;
   justify-content: space-around;
   font-size: 32px;
+  color: #fff;
+  border-color: #000;
+  border-width: 1px;
+  font-family: 'Righteous', serif;
 `
 
 const MenuWrapper = styled.div`
@@ -113,19 +118,21 @@ const Logo = styled(SVG)`
 
 const Container = styled.div`
   width: 100%;
+  background: #161931;
 `
 
 const ButtonUI = styled.button`
   height: 3rem;
+  font-family: 'Righteous';
   width: 10rem;
   text-align: center;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 700;
   color: #ffff;
   border-color: #99f;
   border-width: 2px;
   background: #99f;
-  border-radius: 10px;
+  border-radius: 5px;
 `
 
 Header.propTypes = {
