@@ -9,8 +9,16 @@ import catalogRu from 'Locales/ru/messages.json'
 import catalogFr from 'Locales/fr/messages.json'
 import catalogEs from 'Locales/es/messages.json'
 import Provider from 'redhooks'
+import { createGlobalStyle } from 'styled-components'
 import WrapperRouter from './Router'
 import { store } from './Redux'
+
+const GlobalStyles = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css?family=Notable');
+  body {
+    font-family: 'Notable', sans-serif;
+  }
+`
 
 const catalogs = {
   en: catalogEn,
@@ -22,6 +30,7 @@ const catalogs = {
 const Index = () => {
   return (
     <Provider store={store}>
+      <GlobalStyles />
       <I18nProvider language='en' catalogs={catalogs}>
         <WrapperRouter />
       </I18nProvider>
