@@ -1,9 +1,9 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const webpack = require('webpack')
-const { DefinePlugin } = require('webpack')
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const Dotenv = require('dotenv-webpack')
+// const webpack = require('webpack')
+// const { DefinePlugin } = require('webpack')
+// const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+// const Dotenv = require('dotenv-webpack')
 
 const resolver = {
   Components: path.resolve(__dirname, 'src/Components'),
@@ -66,7 +66,6 @@ module.exports = {
   },
   plugins: [
     // new DefinePlugin({
-      
     //   'process.env': {
     //     NODE_ENV: JSON.stringify('development'),
     //   },
